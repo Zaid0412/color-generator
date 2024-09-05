@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --white: #FFF;
+    --black:#1A1A1A;
+}
+
+*{
+    color: var(--black);
+    font-family: "Roboto Mono", monospace;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.base-clr{
+    border: 2px solid rgba(0, 0, 0, .5)
+}
+
+header{
+    box-sizing: border-box;
+    padding: 20px;
+    height: 8vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+header input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--black);
+    padding: 10px 15px;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+}
+
+header input:focus{
+    border-bottom: 1px solid #007FFF;
+}
+
+header input:user-invalid{
+    border-bottom: 1px solid #FF3800;
+}
+
+header div{
+    margin-right: 20px;
+}
+
+.weight-input input{
+    padding-left: 25px;
+    background: url("./imgs/percentage-icon.png") no-repeat left;
+    background-size: 13px;
+}
+
+.shuffle-icon{
+    margin-left: auto;
+}
+
+
+.shuffle-icon {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .shuffle-icon:hover {
+    background: rgba(0, 0, 0 , 0.1) radial-gradient(circle, transparent 1%, rgba(0, 0, 0 , 0.1) 1%) center/15000%;
+  }
+  .shuffle-icon:active {
+    background-color: rgba(0, 0, 0 , 0.4);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  
+
+.icon{
+    border-radius: 50%;
+    height: 30px;
+    width: auto;
+    padding: 10px;
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    will-change: transform;
+}
+
+.icon:hover{
+    background-color: #F2F2F2;
+}
+
+.icon:active{
+    transform: scale(1.05);
+}
+
+.main{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-container{
+    box-sizing: border-box;
+    min-width: calc(100vw / 7);
+    max-width: calc(100vw / 3);
+    padding: 20px;
+    
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    flex-grow: 1;
+}
+
+.color-container.isLight h2{
+    color: var(--black);
+}
+
+.color-container h2{
+    font-size: 1.3em;
+    grid-row: 3/4;
+    color: var(--white);
+
+}
+
+.color-container .weight{
+    color: #C6C6C6;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    font-size: 0.8em;
+}
+
+.color-container .copy-icon{
+    height: 25px;
+    width: auto;
+    filter: invert(180);
+    display: none;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    justify-self: center;  
+}
+
+.copy-icon:hover{
+    background-color: rgba(255, 255, 255 , 0.1);
+}
+
+.color-container:hover .copy-icon{
+    display: block;
+}
+
+.color-container.isLight .copy-icon{
+    filter: invert(0);
+}
+
+.copy-icon {
+    background-position: center;
+    transition: background 0.8s;
+  }
+  .copy-icon:hover {
+    background: rgba(255, 255, 255 , 0.1) radial-gradient(circle, transparent 1%, rgba(255, 255, 255 , 0.1) 1%) center/15000%;
+  }
+  .copy-icon:active {
+    background-color: rgba(255, 255, 255 , 0.4);
+    background-size: 100%;
+    transition: background 0s;
+  }
+  

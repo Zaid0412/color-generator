@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="./imgs/color-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Generator</title>
+</head>
+<body>
+    
+    <div id="container">
+        <header>
+            <div class="color-input">
+                <input type="text" value='blue'>
+            </div>
+            <div class="weight-input">
+                <input type="number" min="1" max="100" step="0.1" value="10">
+            </div>
+
+            <img src="./imgs/shuffle-icon.png" alt="Random Color" class="shuffle-icon icon" role="button">
+        </header>
+        <div class="main">
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/values.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
